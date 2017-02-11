@@ -14,7 +14,7 @@ int h = 0;	// HUMIDITY VAR
 
 String data;
 
-int readingInterval = 5 // in minutes
+int readingInterval = 1 // in minutes
 
 void setup() { 
 	Serial.begin(115200);
