@@ -1,16 +1,16 @@
-# IoT-arduino-weather-station
+# arduino-weather-station
 
-This application connects an Arduino that reads data from sensors* (temperature and humidity in this case) to a PHP application that stores the information on a Database and displays it with a Javascript library specific for Data Visualization.
+This application connects an Arduino that reads data from sensors* (temperature and humidity in this case) to a PHP application that stores the information on a Database and displays it with a Javascript library specific for Data Visualization. (D3.js)
 
 
-## Getting Started
+## For Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
 ### Prerequisities
 
 - Arduino with ehternet shield or other network interface
-- Apache Web Server
+- Apache Web Server WAMP or LAMP
 - MySQL Database Server
 
 The web application can run within a local area network, with the help of XAMP application stack (on linux) or WAMP (on windows), but the server needs to be configured to accept local IP's. Or, like i did, on a server located outside your home network.
@@ -53,16 +53,6 @@ Next, copy the php app files to a server location, taking into account the follo
 	- **www.yourwebsite.domain**
 
 
-- Or, you can create a subdomain and put the PHP inside the subdomain code folder, and it will be accessible through:
-	- **www.yoursubdomain.yourwebsite.domain**
-
-
-- Or, you can create a folder and put the PHP code inside it, and it will be accessible through:
-	- **www.yourwebsite.domain/foldername**
-
-
-
-
 ### 3. Arduino Web Client
 
 To configure the server ther arduino connects to, in the file **Arduino_client.ino**, lines 42 and 44 will take the address of your own server. This address can either be a normal webdomain or an IP Address.
@@ -92,11 +82,6 @@ This javascript library integration will render the information like in the foll
 
 ![D3_data_viz_double_axis](https://cloud.githubusercontent.com/assets/4175297/18608876/ee4fdffe-7cec-11e6-9d6e-60c883305128.png)
 
-
-### Updates to this application
-
-First release is the code shared on Instructables, with the fully functional Arduino Client and a basic PHP Web App. The app only shows a table with the raw sql data.
-
-The second release is the full Application using the D3.js Javascript framework to show an awesome Data Visualization of the information gathered.
+the full Application using the D3.js Javascript framework to show an awesome Data Visualization of the information gathered.
 
 
